@@ -1,3 +1,7 @@
 <template>
-  <h2>Teste</h2>
+  <Menu />
 </template>
+
+<script setup lang="ts">
+import Menu from './components/Menu.vue'
+</script>
