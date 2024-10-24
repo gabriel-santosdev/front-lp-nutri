@@ -42,9 +42,6 @@
     </v-main>
 </template>
 
-<script lang="ts" scoped>
-</script>
-
 <style lang="scss" scoped>
 .profile-circle {
     position: relative;
