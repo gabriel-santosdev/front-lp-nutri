@@ -34,7 +34,6 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { mask } from 'vue-the-mask';
 
 const valid = ref(false);
 const form = ref({
@@ -47,7 +46,7 @@ const form = ref({
 
 const rules = {
     required: (value: any) => !!value || 'Campo obrigatório.',
-    email: (value: String) => {
+    email: (value: string) => {
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailPattern.test(value) || 'E-mail inválido.';
     }
