@@ -39,6 +39,10 @@
 
         <!-- Conteúdo principal -->
         <About />
+        <Whensearch />
+        <Testimonial />
+        <Specialties />
+        <Contact />
     </v-app>
 </template>
 
@@ -46,6 +50,10 @@
 import { ref } from 'vue';
 
 import About from './About.vue'
+import Whensearch from './Whensearch.vue';
+import Testimonial from './Testimonial.vue';
+import Specialties from './Specialties.vue';
+import Contact from './Contact.vue';
 
 const drawer = ref(false);
 </script>

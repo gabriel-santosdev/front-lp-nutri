@@ -1,6 +1,7 @@
 import './assets/scss/index.scss'
 import { createApp } from 'vue';
 import App from './App.vue'
+import { mask } from 'vue-the-mask';
 
 // Vuetify
 import 'vuetify/styles'
@@ -22,4 +23,4 @@ const vuetify = createVuetify({
     },
 })
 
-createApp(App).use(vuetify).mount('#app')
+createApp(App).use(vuetify).directive('mask', mask).mount('#app')
