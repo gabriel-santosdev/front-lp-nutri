@@ -30,19 +30,19 @@ export default {
                     title: "Nutrição Esportiva",
                     subtitle: "Aprimorando seu desempenho",
                     description: "Desenvolvo planos nutricionais específicos para atletas e entusiastas do esporte, focando em macronutrientes que maximizam a performance, recuperação e resistência durante os treinos e competições.",
-                    image: "src/assets/images/nutri_esportiva.png"
+                    image: "../../public/images/nutri_esportiva.png"
                 },
                 {
                     title: "Nutrição Funcional",
                     subtitle: "Saúde em primeiro lugar",
                     description: "Trabalho com uma abordagem que utiliza alimentos para ajudar na prevenção de doenças e promover a saúde geral, adaptando a dieta às necessidades individuais e ao estilo de vida.",
-                    image: "src/assets/images/nutri_funcional.png"
+                    image: "../../public/images/nutri_funcional.png"
                 },
                 {
                     title: "Nutrição Clínica",
                     subtitle: "Cuidando da sua saúde",
                     description: "Ofereço atendimento individualizado e suporte nutricional para diversas condições de saúde, incluindo diabetes, hipertensão e alergias alimentares, visando melhorar a qualidade de vida dos meus pacientes.",
-                    image: "src/assets/images/nutri_clinica.png"
+                    image: "../../public/images/nutri_clinica.png"
                 }
             ]
         };
