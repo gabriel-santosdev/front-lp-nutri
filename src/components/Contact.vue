@@ -4,7 +4,7 @@
             <v-col cols="12">
                 <v-card class="form-card">
                     <v-card-title class="text-center">
-                        <h1>Formulário de Contato</h1>
+                        <h1 class="title">Contato</h1>
                     </v-card-title>
                     <v-card-text>
                         <v-form ref="form" v-model="valid" lazy-validation @submit.prevent="submitForm">
@@ -92,5 +92,16 @@ const resetForm = () => {
     margin: auto;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 1.8rem;
+    }
 }
 </style>
