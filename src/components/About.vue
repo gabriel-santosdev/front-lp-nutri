@@ -4,7 +4,7 @@
             <v-row align="center" class="my-4">
                 <v-col cols="12" md="5" class="d-flex justify-center position-relative">
                     <div class="profile-circle">
-                        <v-img src="src/assets/images/profile-lp-kay.png" class="rounded-circle" :max-width="450"
+                        <v-img src="../assets/images/profile-lp-kay.png" class="rounded-circle" :max-width="450"
                             :max-height="450">
                         </v-img>
                         <div class="overlay">
