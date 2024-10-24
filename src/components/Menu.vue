@@ -9,9 +9,9 @@
 
             <v-spacer></v-spacer>
 
-            <v-btn text?:string class="d-none d-md-flex">Início</v-btn>
-            <v-btn text?:string class="d-none d-md-flex">Sobre</v-btn>
-            <v-btn text?:string class="d-none d-md-flex">Contato</v-btn>
+            <v-btn text class="d-none d-md-flex">Início</v-btn>
+            <v-btn text class="d-none d-md-flex">Sobre</v-btn>
+            <v-btn text class="d-none d-md-flex">Contato</v-btn>
         </v-app-bar>
 
         <!-- Menu lateral (drawer) para mobile -->
