@@ -64,7 +64,7 @@ const testimonials = ref([
 
 <style scoped>
 .testimonial-section {
-    background-image: linear-gradient(90deg, #008A8E 0%, #026366 100%);
+    background: linear-gradient(90deg, #008A8E 0%, #026366 100%);
     padding: 4rem 2rem;
 }
 

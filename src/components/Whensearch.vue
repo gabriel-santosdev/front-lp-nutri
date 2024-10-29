@@ -54,7 +54,7 @@ const openWhatsApp = () => {
 
 <style scoped>
 .nutrition-section {
-    background-color: #A6A04B;
+    background: linear-gradient(135deg, #A6A04B, #D4D087, #ECE9C2);
     padding: 4rem 2rem;
 }
 
@@ -90,7 +90,7 @@ const openWhatsApp = () => {
 }
 
 .whatsapp-btn {
-    background-color: #f2784b;
+    background: linear-gradient(90deg, #008A8E 0%, #026366 100%);
     color: white;
     font-weight: bold;
     border-radius: 24px;

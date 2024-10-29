@@ -43,6 +43,10 @@
 </template>
 
 <style lang="scss" scoped>
+.background-about {
+    background: linear-gradient(90deg, #EEE8D9 0%, #CCC6B4 100%);
+}
+
 .profile-circle {
     position: relative;
     width: 450px;

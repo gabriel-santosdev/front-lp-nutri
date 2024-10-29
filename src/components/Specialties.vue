@@ -53,6 +53,7 @@ export default {
 <style scoped>
 .my-specialties {
     background-color: #f5f5f5;
+    padding: 100px 0 100px;
 }
 
 .text {

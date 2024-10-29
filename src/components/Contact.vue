@@ -7,7 +7,7 @@
                         <h1 class="title">Contato</h1>
                     </v-card-title>
                     <v-card-text>
-                        <v-form ref="form" v-model="valid" lazy-validation @submit.prevent="submitForm">
+                        <v-form ref="formRef" v-model="valid" lazy-validation @submit.prevent="submitForm">
                             <v-text-field v-model="form.name" :rules="[rules.required]" label="Nome"
                                 required></v-text-field>
 
@@ -36,6 +36,7 @@
 import { ref } from 'vue';
 
 const valid = ref(false);
+const formRef = ref(null);
 const form = ref({
     name: '',
     email: '',
@@ -64,6 +65,7 @@ const submitForm = () => {
         const payload = { ...form.value };
         console.log('Formulário enviado:', payload);
         alert('Formulário enviado com sucesso!');
+
         resetForm();
     }
 };
@@ -76,13 +78,19 @@ const resetForm = () => {
         reason: '',
         howHeard: ''
     };
+
+    // Verifica se formRef foi montado corretamente antes de chamar resetValidation
+    if (formRef.value) {
+        formRef.value.resetValidation();
+    }
+
     valid.value = false;
 };
 </script>
 
 <style scoped>
 .contact-form {
-    background-color: #f9f9f9;
+    background: linear-gradient(135deg, #A6A04B, #D4D087, #ECE9C2);
     padding: 40px 0;
 }
 
