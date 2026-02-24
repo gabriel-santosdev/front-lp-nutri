@@ -1,9 +1,9 @@
 <template>
-    <v-footer color="#A6A04B" class="footer">
+    <v-footer class="footer">
         <v-container>
             <v-row align="center" justify="space-between">
                 <v-col class="footer-name">
-                    <h2 class="white--text">Kayanne Morais Nutricionista</h2>
+                    <h2 class="white--text">Kayanne Morais</h2>
                 </v-col>
                 <v-col class="footer-right" align="end">
                     <v-row justify="end">
@@ -20,12 +20,16 @@
                                 class="social-icon">mdi-linkedin</v-icon>
                         </v-col>
                     </v-row>
-                    <p class="white--text footer-address">Endereço: Rua Exemplo, 123, Cidade, Estado</p>
+                    <p class="footer-address">Endereço: Rua Exemplo, 123, Cidade, Estado</p>
+                    <v-btn @click="scrollToTop" class="btn-topo" prepend-icon="mdi-arrow-up">
+                        Voltar ao Topo
+                    </v-btn>
                 </v-col>
             </v-row>
             <v-divider class="my-2"></v-divider>
             <v-row justify="center">
-                <p class="white--text">© {{ currentYear }} Todos os direitos reservados.</p>
+                <p>© {{ currentYear }} Todos os direitos reservados.<br> Desenvolvido por <a>Gabriel
+                        Santos | GS Software</a></p>
             </v-row>
         </v-container>
     </v-footer>
@@ -39,15 +43,25 @@ const currentYear = ref(new Date().getFullYear());
 const openLink = (url) => {
     window.open(url, '_blank');
 };
+
+const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+};
 </script>
 
 <style scoped>
 .footer {
-    padding: 20px 0;
+    padding: 28px 0;
+    background: transparent;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .footer-name {
-    font-weight: bold;
+    font-weight: 600;
+    color: var(--text-color);
 }
 
 .footer-right {
@@ -55,17 +69,26 @@ const openLink = (url) => {
 }
 
 .footer-address {
-    margin-top: 5px;
+    margin-top: 6px;
+    color: var(--muted-text);
 }
 
 .social-icon {
-    font-size: 24px;
-    color: white;
+    font-size: 22px;
+    color: var(--muted-text);
     cursor: pointer;
-    transition: color 0.3s;
+    transition: color 0.18s ease, transform 0.18s ease;
 }
 
 .social-icon:hover {
-    color: #ccc;
+    color: var(--color-primary);
+    transform: translateY(-3px);
+}
+
+.btn-topo {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    color: var(--text-color);
+    border-radius: 20px;
 }
 </style>

@@ -64,51 +64,52 @@ const testimonials = ref([
 
 <style scoped>
 .testimonial-section {
-    background-image: linear-gradient(90deg, #008A8E 0%, #026366 100%);
-    padding: 4rem 2rem;
+    background: linear-gradient(180deg, #ffffff 0%, var(--color-neutral) 100%);
+    padding: 3.5rem 1.2rem;
 }
 
 .testimonial-card {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 16px;
-    min-height: 230px;
+    background-color: var(--card-bg);
+    border-radius: 14px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 22px;
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 .testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
 }
 
 .testimonial-header {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .testimonial-name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #58592a;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-primary);
 }
 
 .testimonial-text {
-    font-size: 1rem;
-    color: #58592a;
+    font-size: 0.98rem;
+    color: var(--muted-text);
 }
 
 .btn-testimonials,
 .btn-consulta {
-    background-color: #f2784b;
+    background: var(--color-primary);
     color: white;
-    border-radius: 24px;
-    margin: 0 10px;
+    border-radius: 999px;
+    margin: 0 8px;
 }
 
 .btn-testimonials:hover,
 .btn-consulta:hover {
-    background-color: #f2884b;
+    background: var(--color-accent);
 }
 </style>

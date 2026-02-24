@@ -7,7 +7,7 @@
                         <h1 class="title">Contato</h1>
                     </v-card-title>
                     <v-card-text>
-                        <v-form ref="form" v-model="valid" lazy-validation @submit.prevent="submitForm">
+                        <v-form ref="formRef" v-model="valid" lazy-validation @submit.prevent="submitForm">
                             <v-text-field v-model="form.name" :rules="[rules.required]" label="Nome"
                                 required></v-text-field>
 
@@ -23,7 +23,7 @@
                             <v-select v-model="form.howHeard" :items="howHeardOptions" :rules="[rules.required]"
                                 label="Como você conheceu nosso serviço?" required></v-select>
 
-                            <v-btn type="submit" color="primary">Enviar</v-btn>
+                            <v-btn type="submit" class="btn-primary">Enviar</v-btn>
                         </v-form>
                     </v-card-text>
                 </v-card>
@@ -36,6 +36,7 @@
 import { ref } from 'vue';
 
 const valid = ref(false);
+const formRef = ref(null);
 const form = ref({
     name: '',
     email: '',
@@ -64,6 +65,7 @@ const submitForm = () => {
         const payload = { ...form.value };
         console.log('Formulário enviado:', payload);
         alert('Formulário enviado com sucesso!');
+
         resetForm();
     }
 };
@@ -76,31 +78,42 @@ const resetForm = () => {
         reason: '',
         howHeard: ''
     };
+
+    // Verifica se formRef foi montado corretamente antes de chamar resetValidation
+    if (formRef.value) {
+        formRef.value.resetValidation();
+    }
+
     valid.value = false;
 };
 </script>
 
 <style scoped>
 .contact-form {
-    background-color: #f9f9f9;
-    padding: 40px 0;
+    background: linear-gradient(180deg, #ffffff 0%, var(--color-neutral) 100%);
+    padding: 56px 0;
 }
 
 .form-card {
-    max-width: 600px;
+    max-width: 640px;
     margin: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 .title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 0;
+    color: var(--color-primary);
 }
+
+/* use global .btn-primary from index.scss */
 
 @media (max-width: 600px) {
     .title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 }
 </style>
