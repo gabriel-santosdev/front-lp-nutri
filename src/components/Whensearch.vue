@@ -54,15 +54,15 @@ const openWhatsApp = () => {
 
 <style scoped>
 .nutrition-section {
-    background: linear-gradient(135deg, #A6A04B, #D4D087, #ECE9C2);
-    padding: 4rem 2rem;
+    background: #ffffff;
+    padding: 3.5rem 1rem;
 }
 
 .title {
-    font-size: 2.2rem;
-    color: #58592a;
-    font-weight: bold;
-    margin-bottom: 2rem;
+    font-size: 1.9rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 1.4rem;
 }
 
 .transparent-card {
@@ -70,34 +70,41 @@ const openWhatsApp = () => {
 }
 
 .option-card {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--card-bg);
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 .option-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
 }
 
 .option {
-    font-size: 1.2rem;
-    color: #58592a;
+    font-size: 1.05rem;
+    color: var(--muted-text);
 }
 
 .actions {
-    margin-top: 2rem;
+    margin-top: 1.6rem;
 }
 
 .whatsapp-btn {
-    background: linear-gradient(90deg, #008A8E 0%, #026366 100%);
+    background: linear-gradient(90deg, var(--color-accent), var(--color-primary));
     color: white;
-    font-weight: bold;
-    border-radius: 24px;
+    font-weight: 600;
+    border-radius: 28px;
+    padding: 10px 18px;
+    box-shadow: 0 10px 26px rgba(174, 115, 82, 0.12);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .whatsapp-btn:hover {
-    background-color: #f2884b;
+    transform: translateY(-3px);
+    box-shadow: 0 14px 34px rgba(174, 115, 82, 0.14);
 }
 
 @media (max-width: 960px) {
@@ -106,7 +113,7 @@ const openWhatsApp = () => {
     }
 
     .title {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 }
 </style>

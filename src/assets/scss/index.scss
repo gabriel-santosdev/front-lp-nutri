@@ -1,8 +1,106 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap');
+
+:root {
+    /* Palette from attachment */
+    --color-primary: #AE7352; /* deep warm brown */
+    --color-accent: #CF875E; /* terracotta / accent */
+    --color-warm: #D7A87D; /* light warm */
+    --color-neutral: #D8DBD9; /* soft gray */
+    --color-soft-green: #AAAF99; /* muted green */
+
+    /* Semantic colors */
+    --text-color: #222222;
+    --muted-text: #6b6b6b;
+    --card-bg: #ffffff;
+    --glass: rgba(255,255,255,0.72);
+
+    /* buttons/shadows */
+    --shadow-soft: 0 8px 24px rgba(0,0,0,0.06);
+    --shadow-strong: 0 12px 34px rgba(0,0,0,0.08);
+    /* stronger green variation for accents */
+    --color-green-strong: #8FA36A;
+}
 
 html,
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+    font-family: 'Poppins', 'Open Sans', sans-serif;
+    background: #ffffff;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+/* Headings use an elegant serif for a chic look suitable for nutrition branding */
+h1,h2,h3,h4,h5 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-color);
+    letter-spacing: 0.4px;
+}
+
+/* Utility classes to use the palette more easily */
+.container-centered {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.muted {
+    color: var(--muted-text) !important;
+}
+
+.accent-text {
+    color: var(--color-accent) !important;
+}
+
+.text-primary { color: var(--color-primary) !important; }
+.text-warm { color: var(--color-warm) !important; }
+.text-green { color: var(--color-soft-green) !important; }
+
+.bg-neutral { background: var(--color-neutral) !important; }
+.bg-warm { background: var(--color-warm) !important; }
+.bg-green { background: var(--color-soft-green) !important; }
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(90deg, var(--color-accent), var(--color-primary));
+    color: #fff;
+    border-radius: 28px;
+    padding: 10px 18px;
+    box-shadow: var(--shadow-soft);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-green {
+    background: linear-gradient(90deg, rgba(170,175,153,0.95), rgba(215,168,125,0.95));
+    color: #fff;
+    border-radius: 22px;
+    padding: 8px 14px;
+    box-shadow: var(--shadow-soft);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid rgba(0,0,0,0.06);
+    color: var(--text-color);
+}
+
+/* Card defaults */
+.card-soft {
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.04);
+    box-shadow: var(--shadow-soft);
+}
+
+/* Small helpers */
+.muted-2 { color: rgba(0,0,0,0.45); }
+.caps { text-transform: uppercase; letter-spacing: 1px; }
+
+/* Responsive typography tweaks */
+@media (max-width: 600px) {
+    h1 { font-size: 1.6rem; }
 }

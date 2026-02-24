@@ -1,5 +1,5 @@
 <template>
-    <v-footer color="#6F4D5A" class="footer">
+    <v-footer class="footer">
         <v-container>
             <v-row align="center" justify="space-between">
                 <v-col class="footer-name">
@@ -20,15 +20,15 @@
                                 class="social-icon">mdi-linkedin</v-icon>
                         </v-col>
                     </v-row>
-                    <p class="white--text footer-address">Endereço: Rua Exemplo, 123, Cidade, Estado</p>
-                    <v-btn @click="scrollToTop" color="primary" dark prepend-icon="mdi-arrow-up">
+                    <p class="footer-address">Endereço: Rua Exemplo, 123, Cidade, Estado</p>
+                    <v-btn @click="scrollToTop" class="btn-topo" prepend-icon="mdi-arrow-up">
                         Voltar ao Topo
                     </v-btn>
                 </v-col>
             </v-row>
             <v-divider class="my-2"></v-divider>
             <v-row justify="center">
-                <p class="white--text">© {{ currentYear }} Todos os direitos reservados.<br> Desenvolvido por <a>Gabriel
+                <p>© {{ currentYear }} Todos os direitos reservados.<br> Desenvolvido por <a>Gabriel
                         Santos | GS Software</a></p>
             </v-row>
         </v-container>
@@ -54,11 +54,14 @@ const scrollToTop = () => {
 
 <style scoped>
 .footer {
-    padding: 20px 0;
+    padding: 28px 0;
+    background: transparent;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .footer-name {
-    font-weight: bold;
+    font-weight: 600;
+    color: var(--text-color);
 }
 
 .footer-right {
@@ -66,17 +69,26 @@ const scrollToTop = () => {
 }
 
 .footer-address {
-    margin-top: 5px;
+    margin-top: 6px;
+    color: var(--muted-text);
 }
 
 .social-icon {
-    font-size: 24px;
-    color: white;
+    font-size: 22px;
+    color: var(--muted-text);
     cursor: pointer;
-    transition: color 0.3s;
+    transition: color 0.18s ease, transform 0.18s ease;
 }
 
 .social-icon:hover {
-    color: #ccc;
+    color: var(--color-primary);
+    transform: translateY(-3px);
+}
+
+.btn-topo {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    color: var(--text-color);
+    border-radius: 20px;
 }
 </style>

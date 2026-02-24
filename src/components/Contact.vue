@@ -23,7 +23,7 @@
                             <v-select v-model="form.howHeard" :items="howHeardOptions" :rules="[rules.required]"
                                 label="Como você conheceu nosso serviço?" required></v-select>
 
-                            <v-btn type="submit" color="primary">Enviar</v-btn>
+                            <v-btn type="submit" class="btn-primary">Enviar</v-btn>
                         </v-form>
                     </v-card-text>
                 </v-card>
@@ -90,25 +90,30 @@ const resetForm = () => {
 
 <style scoped>
 .contact-form {
-    background: linear-gradient(135deg, #A6A04B, #D4D087, #ECE9C2);
-    padding: 40px 0;
+    background: linear-gradient(180deg, #ffffff 0%, var(--color-neutral) 100%);
+    padding: 56px 0;
 }
 
 .form-card {
-    max-width: 600px;
+    max-width: 640px;
     margin: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 .title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 0;
+    color: var(--color-primary);
 }
+
+/* use global .btn-primary from index.scss */
 
 @media (max-width: 600px) {
     .title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 }
 </style>

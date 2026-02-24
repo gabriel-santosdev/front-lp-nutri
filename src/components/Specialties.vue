@@ -8,8 +8,8 @@
 
         <v-row>
             <v-col v-for="(specialty, index) in specialties" :key="index" cols="12" md="4">
-                <v-card class="specialty-card" :style="{ animation: `fade-in 0.5s ease ${index * 0.1}s` }">
-                    <v-img :src="specialty.image" height="200px" />
+                <v-card class="specialty-card card-soft" :style="{ animation: `fade-in 0.5s ease ${index * 0.1}s` }">
+                    <v-img class="specialty-img" :src="specialty.image" height="160px" />
                     <v-card-title class="specialty-title">{{ specialty.title }}</v-card-title>
                     <v-card-subtitle class="specialty-subtitle">{{ specialty.subtitle }}</v-card-subtitle>
                     <v-card-text>
@@ -52,46 +52,63 @@ export default {
 
 <style scoped>
 .my-specialties {
-    background-color: #f5f5f5;
-    padding: 100px 0 100px;
+    background: #ffffff;
+    padding: 6rem 0 6rem;
 }
 
 .text {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
-    margin-bottom: 30px;
+    color: var(--text-color);
+    margin-bottom: 2rem;
 }
 
 .specialty-card {
-    transition: transform 0.3s, box-shadow 0.3s;
-    border-radius: 8px;
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    border-radius: 12px;
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
 }
 
 .specialty-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
 }
 
 .specialty-title {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #333;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--color-primary);
 }
 
 .specialty-subtitle {
     font-weight: 400;
-    color: #777;
+    color: var(--muted-text);
+}
+
+.specialty-card .specialty-img {
+    height: 160px;
+    object-fit: contain;
+    padding: 12px;
+}
+
+.specialty-card v-card-text p {
+    margin: 0;
+    color: var(--muted-text);
 }
 
 @keyframes fade-in {
     from {
         opacity: 0;
+        transform: translateY(6px);
     }
 
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 </style>
