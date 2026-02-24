@@ -36,7 +36,7 @@
 import { ref } from 'vue';
 
 const valid = ref(false);
-const formRef = ref(null);
+const formRef = ref<any>(null);
 const form = ref({
     name: '',
     email: '',
